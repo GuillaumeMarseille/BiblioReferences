@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BiblioSupprimeInterface</class>
+ <widget class="QDialog" name="BiblioSupprimeInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>578</width>
+    <height>185</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BiblioSupprimeInterface</string>
+  </property>
+  <widget class="QPushButton" name="supprimer">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>120</y>
+     <width>90</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Supprimer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="annuler">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>120</y>
+     <width>90</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Annuler</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>271</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Entrez le numéro d'identifiant à supprimer :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="identifiant">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>50</y>
+     <width>251</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>annuler</sender>
+   <signal>clicked()</signal>
+   <receiver>BiblioSupprimeInterface</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>384</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>288</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>supprimer</sender>
+   <signal>clicked()</signal>
+   <receiver>BiblioSupprimeInterface</receiver>
+   <slot>valideInfoIdentifiant()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>234</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>288</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>valideInfoIdentifiant()</slot>
+ </slots>
+</ui>
